@@ -203,7 +203,7 @@ loaded. The dataset and its metadata are available here:
 
 ``` r
 library(readr)
-student_data <- read_csv("GitHub/Lab1/BBT4206-R-Lab4of15-DataTransforms-data-pink-panthers/data/BI1-BBIT4-1-StudentPerformanceDataset.csv", col_types =
+student_data <- read_csv("data/BI1-BBIT4-1-StudentPerformanceDataset.csv", col_types =
                            readr::cols(
                              class_group =
                                readr::col_factor(levels = c("A", "B", "C")),
@@ -671,7 +671,7 @@ summary(student_data_numerics_pca_dr)
 # matrix.
 
 student_data_numerics_pca_fe <- princomp(cor(student_data_numerics))
-summary(student_data_numerics_pca_fe_pca_fe)
+summary(student_data_numerics_pca_fe)
 
 #### Scree Plot ----
 # The Scree Plot shows that the 1st 2 principal components can cumulatively
