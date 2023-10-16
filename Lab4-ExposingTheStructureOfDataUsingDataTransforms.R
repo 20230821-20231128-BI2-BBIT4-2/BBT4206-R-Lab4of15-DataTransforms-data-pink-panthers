@@ -201,13 +201,14 @@ data("BostonHousing")
 
 ### Crop Dataset ----
 # Execute the following to load the downloaded Crop dataset:
-crop_dataset <- read_csv("data/crop.data.csv",
+crop_dataset <- read_csv("GitHub/Lab1/BBT4206-R-Lab4of15-DataTransforms-data-pink-panthers/data/crop.data.csv",
   col_types = cols(
     density = col_factor(levels = c("1", "2")),
     block = col_factor(levels = c("1", "2", "3", "4")),
     fertilizer = col_factor(levels = c("1", "2", "3"))
   )
 )
+View(crop_dataset)
 
 ### Iris Dataset ----
 # Execute the following to load the downloaded Iris dataset:
