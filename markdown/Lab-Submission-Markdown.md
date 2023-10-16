@@ -1,53 +1,101 @@
----
-title: "Business Intelligence Project"
+Business Intelligence Project
+================
 
-output:
-  github_document: 
-    toc: yes
-    toc_depth: 4
-    fig_width: 6
-    fig_height: 4
-    df_print: default
-editor_options:
-  chunk_output_type: console
----
+- [Business Intelligence Lab Submission
+  Markdown](#business-intelligence-lab-submission-markdown)
+- [Student Details](#student-details)
+- [Step 1: Setup Chunk](#setup-chunk)
+- [STEP 2 Loading the Student Performance
+  Dataset](#loading-the-student-performance-dataset)
+  - [STEP 3 Apply a Scale Data
+    Transform}](#step-3-apply-a-scale-data-transform)
+  - [STEP 4 Apply a Centre Data
+    Transform](#step-4-apply-a-centre-data-transform)
+  - [STEP 5. Apply a Standardize Data Transform
+    —-](#step-5-apply-a-standardize-data-transform--)
+  - [STEP 6. Apply a Normalize Data Transform
+    —-](#step-6-apply-a-normalize-data-transform--)
+  - [STEP 7. Apply a Box-Cox Power Transform
+    —-](#step-7-apply-a-box-cox-power-transform--)
+  - [STEP 8. Apply a Yeo-Johnson Power Transform
+    —-](#step-8-apply-a-yeo-johnson-power-transform--)
+  - [STEP 9.a. PCA Linear Algebra Transform for Dimensionality Reduction
+    —-](#step-9a-pca-linear-algebra-transform-for-dimensionality-reduction--)
+  - [STEP 9.b. PCA Linear Algebra Transform for Feature Extraction
+    —-](#step-9b-pca-linear-algebra-transform-for-feature-extraction--)
+  - [STEP 10. ICA Linear Algebra Transform for Dimensionality Reduction
+    —-](#step-10-ica-linear-algebra-transform-for-dimensionality-reduction--)
+
 # Business Intelligence Lab Submission Markdown
 
 <Data Pink Panthers> \<16/10/23\>
 
--   [Student Details](#student-details)
--   [Setup Chunk](#setup-chunk)
--   [Loading the Student Performance Dataset](#loading-the-student-performance-dataset)
-    -   [Description of the Dataset](#description-of-the-dataset)
--   [\<You can Provide Another Appropriate Title Here if you wish\>](#you-can-provide-another-appropriate-title-here-if-you-wish)
-    -   [\<You Can Have a Sub-Title Here if you wish\>](#you-can-have-a-sub-title-here-if-you-wish)
-    -   [\<You Can Have Another Sub-Title Here if you wish\>](#you-can-have-another-sub-title-here-if-you-wish)
+- [Student Details](#student-details)
+- [Setup Chunk](#setup-chunk)
+- [Loading the Student Performance
+  Dataset](#loading-the-student-performance-dataset)
+  - [Description of the Dataset](#description-of-the-dataset)
+- [\<You can Provide Another Appropriate Title Here if you
+  wish\>](#you-can-provide-another-appropriate-title-here-if-you-wish)
+  - [\<You Can Have a Sub-Title Here if you
+    wish\>](#you-can-have-a-sub-title-here-if-you-wish)
+  - [\<You Can Have Another Sub-Title Here if you
+    wish\>](#you-can-have-another-sub-title-here-if-you-wish)
 
-# Student Details {#student-details}
+# Student Details
 
-+---------------------------------------------------+------------------------------------------------+--------------------+-----------+
-| **Student ID Numbers and Names of Group Members** | \| 1. 137315 - C - Yashvi Bhadania             |                    |           |
-|                                                   |                                                |                    |           |
-|                                                   | \| 2. 134668 - C - June Ndinda Mutiso          |                    |           |
-|                                                   |                                                |                    |           |
-|                                                   | \| 3. 135227 - C - Inncent Mbuvi               |                    |           |
-|                                                   |                                                |                    |           |
-|                                                   | \| 4. 134253 - C - Uzair Farooq                |                    |           |
-|                                                   |                                                |                    |           |
-|                                                   | \| 5. 135109 - C - Jackson Kaburu              |                    |           |
-+---------------------------------------------------+------------------------------------------------+--------------------+-----------+
-|                                                   | **GitHub Classroom Group Name**                | Data Pink Panthers |           |
-+---------------------------------------------------+------------------------------------------------+--------------------+-----------+
-| **Course Code**                                   | BBT4206                                        |                    |           |
-+---------------------------------------------------+------------------------------------------------+--------------------+-----------+
-| **Course Name**                                   | Business Intelligence II                       |                    |           |
-+---------------------------------------------------+------------------------------------------------+--------------------+-----------+
-| **Program**                                       | Bachelor of Business Information Technology    |                    |           |
-+---------------------------------------------------+------------------------------------------------+--------------------+-----------+
-| **Semester Duration**                             | 16^th^ October 2023 to 28^th^ November 2023 \| |                    |           |
-+---------------------------------------------------+------------------------------------------------+--------------------+-----------+
+<table style="width:99%;">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 36%" />
+<col style="width: 15%" />
+<col style="width: 8%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Student ID Numbers and Names of Group Members</strong></td>
+<td><p>| 1. 137315 - C - Yashvi Bhadania</p>
+<p>| 2. 134668 - C - June Ndinda Mutiso</p>
+<p>| 3. 135227 - C - Inncent Mbuvi</p>
+<p>| 4. 134253 - C - Uzair Farooq</p>
+<p>| 5. 135109 - C - Jackson Kaburu</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td><strong>GitHub Classroom Group Name</strong></td>
+<td>Data Pink Panthers</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Course Code</strong></td>
+<td>BBT4206</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Course Name</strong></td>
+<td>Business Intelligence II</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Program</strong></td>
+<td>Bachelor of Business Information Technology</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Semester Duration</strong></td>
+<td>16<sup>th</sup> October 2023 to 28<sup>th</sup> November 2023 |</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
-# Step 1: Setup Chunk {#setup-chunk}
+# Step 1: Setup Chunk
 
 We start by installing all the required packages
 
@@ -112,10 +160,13 @@ if (require("FactoMineR")) {
 
 ------------------------------------------------------------------------
 
-**Note:** the following "*KnitR*" options have been set as the defaults in this markdown:\
+**Note:** the following “*KnitR*” options have been set as the defaults
+in this markdown:  
 `knitr::opts_chunk$set(echo = TRUE, warning = FALSE, eval = TRUE, collapse = FALSE, tidy.opts = list(width.cutoff = 80), tidy = TRUE)`.
 
-More KnitR options are documented here <https://bookdown.org/yihui/rmarkdown-cookbook/chunk-options.html> and here <https://yihui.org/knitr/options/>.
+More KnitR options are documented here
+<https://bookdown.org/yihui/rmarkdown-cookbook/chunk-options.html> and
+here <https://yihui.org/knitr/options/>.
 
 ``` r
 knitr::opts_chunk$set(
@@ -129,23 +180,26 @@ knitr::opts_chunk$set(
 
 ------------------------------------------------------------------------
 
-**Note:** the following "*R Markdown*" options have been set as the defaults in this markdown:
+**Note:** the following “*R Markdown*” options have been set as the
+defaults in this markdown:
 
 > output:
 >
-> github_document:\
-> toc: yes\
-> toc_depth: 4\
-> fig_width: 6\
-> fig_height: 4\
+> github_document:  
+> toc: yes  
+> toc_depth: 4  
+> fig_width: 6  
+> fig_height: 4  
 > df_print: default
 >
-> editor_options:\
+> editor_options:  
 > chunk_output_type: console
 
-# STEP 2 Loading the Student Performance Dataset {#loading-the-student-performance-dataset}
+# STEP 2 Loading the Student Performance Dataset
 
-The 20230412-20230719-BI1-BBIT4-1-StudentPerformanceDataset is then loaded. The dataset and its metadata are available here: <https://drive.google.com/drive/folders/1-BGEhfOwquXF6KKXwcvrx7WuZXuqmW9q?usp=sharing>
+The 20230412-20230719-BI1-BBIT4-1-StudentPerformanceDataset is then
+loaded. The dataset and its metadata are available here:
+<https://drive.google.com/drive/folders/1-BGEhfOwquXF6KKXwcvrx7WuZXuqmW9q?usp=sharing>
 
 ``` r
 library(readr)
@@ -281,7 +335,6 @@ student_data <- read_csv("GitHub/Lab1/BBT4206-R-Lab4of15-DataTransforms-data-pin
                                                            "E"))),
                          locale = readr::locale())
 View(student_data)
-
 ```
 
 ## STEP 3 Apply a Scale Data Transform}
@@ -421,10 +474,9 @@ boxplot(student_data_center_transform[, 97], main = names(student_data_center_tr
 boxplot(student_data_center_transform[, 98], main = names(student_data_center_transform)[98])
 boxplot(student_data_center_transform[, 99], main = names(student_data_center_transform)[99])
 boxplot(student_data_center_transform[, 10], main = names(student_data_center_transform)[100])
-
 ```
 
-## STEP 5. Apply a Standardize Data Transform ----
+## STEP 5. Apply a Standardize Data Transform —-
 
 ``` r
 # Standardize Data Transform ----
@@ -446,7 +498,7 @@ summary(student_data_standardize_transform)
 sapply(student_data_standardize_transform[, 96:99], function(x) sd(x, na.rm = TRUE))
 ```
 
-## STEP 6. Apply a Normalize Data Transform ----
+## STEP 6. Apply a Normalize Data Transform —-
 
 ``` r
 # Normalize Data Transform ----
@@ -465,7 +517,7 @@ student_data_normalize_transform <- predict(model_of_the_transform, # nolint
 summary(student_data_normalize_transform)
 ```
 
-## STEP 7. Apply a Box-Cox Power Transform ----
+## STEP 7. Apply a Box-Cox Power Transform —-
 
 ``` r
 ## STEP 7. Apply a Box-Cox Power Transform ----
@@ -543,7 +595,7 @@ boxplot(student_data_box_cox_transform[, 98], main = names(student_data_box_cox_
 boxplot(student_data_box_cox_transform[, 99], main = names(student_data_box_cox_transform)[99])
 ```
 
-## STEP 8. Apply a Yeo-Johnson Power Transform ----
+## STEP 8. Apply a Yeo-Johnson Power Transform —-
 
 ``` r
 # Yeo-Johnson Power Transform ----
@@ -593,10 +645,9 @@ for (i in 1:24) {
   hist(student_data_numerics_yeo_johnson_transform[, i],
        main = names(student_data_numerics_yeo_johnson_transform)[i])
 }
-
 ```
 
-## STEP 9.a. PCA Linear Algebra Transform for Dimensionality Reduction ----
+## STEP 9.a. PCA Linear Algebra Transform for Dimensionality Reduction —-
 
 ``` r
 ## STEP 9.a. PCA Linear Algebra Transform for Dimensionality Reduction ----
@@ -611,7 +662,7 @@ student_data_numerics_pca_dr <- predict(model_of_the_transform, student_data_num
 summary(student_data_numerics_pca_dr)
 ```
 
-## STEP 9.b. PCA Linear Algebra Transform for Feature Extraction ----
+## STEP 9.b. PCA Linear Algebra Transform for Feature Extraction —-
 
 ``` r
 ## STEP 9.b. PCA Linear Algebra Transform for Feature Extraction ----
@@ -639,7 +690,7 @@ factoextra::fviz_pca_var(student_data_numerics_pca_fe, col.var = "cos2",
                          repel = TRUE)
 ```
 
-## STEP 10. ICA Linear Algebra Transform for Dimensionality Reduction ----
+## STEP 10. ICA Linear Algebra Transform for Dimensionality Reduction —-
 
 ``` r
 ## STEP 10. ICA Linear Algebra Transform for Dimensionality Reduction ----
@@ -665,4 +716,5 @@ student_data_numerics_ica_dr <- predict(model_of_the_transform, student_data_num
 summary(student_data_numerics_ica_dr)
 ```
 
-**etc.** as per the lab submission requirements. Be neat and communicate in a clear and logical manner.
+**etc.** as per the lab submission requirements. Be neat and communicate
+in a clear and logical manner.
